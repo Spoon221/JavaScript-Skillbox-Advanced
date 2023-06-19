@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="FindPairsNew.js" defer></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        .wrapper{
+            max-width: 460px;
+            gap: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card{
+            background-color: #32E44F;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transform: rotateY(180deg);
+            color: transparent;
+            font-weight: 700;
+            font-family: Arial, sans-serif;
+            transition: transform .3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .card img {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .card.open {
+            transform: rotateY(0);
+            color: black;
+        }
+
+        .card.open img {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .card.success {
+            pointer-events: none;
+            background-color: bisque;
+            box-shadow: 0 0 5px aqua;
+        }
+</style>
+</head>
+<body>
+    <div id="game" class="wrapper"></div>
+</body>
+</html>
